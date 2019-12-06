@@ -6,6 +6,8 @@ jobs:
   unit-tests:
     name: Unit tests - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    env:
+      DEBUG: taiko:*
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
